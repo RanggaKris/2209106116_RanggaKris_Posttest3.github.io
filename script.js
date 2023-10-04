@@ -1,32 +1,32 @@
-// Ambil tombol toggle dan elemen body
+// Ini untuk button
 const themeToggle = document.getElementById("aa-button");
 const body = document.body;
 
-// Cek status tema dari localStorage 
+// Ini untuk cek tema dari localStorage 
 const currentTheme = localStorage.getItem("theme");
 
-// Set tema awal
+// Ini untuk set tema pas awal
 if (currentTheme) {
     body.classList.add(currentTheme);
 }
 
-// event listener untuk mengganti tema saat tombol di klik
+// event listener untuk mengganti tema
 themeToggle.addEventListener("click", () => {
     if (body.classList.contains("dark-mode")) {
         body.classList.remove("dark-mode");
         localStorage.setItem("theme", "light-mode");
-        // Manipulasi DOM pada dark mode
+        // Ini untuk memanipulasi DOM pada dark mode
         body.style.fontSize = "16px";
         body.style.margin = "20px";
-        // Menampilkan popup box
+        // Ini untuk menampilkan popup box
         alert("Anda mengganti ke light mode.");
     } else {
         body.classList.add("dark-mode");
         localStorage.setItem("theme", "dark-mode");
-        // Manipulasi DOM pada dark mode
+        // Ini untuk memanipulasi DOM
         body.style.fontSize = "18px";
         body.style.margin = "10px";
-        // Menampilkan popup box
+        // Ini untuk menampilkan popup box
         alert("Anda mengganti ke dark mode.");
     }
 });
